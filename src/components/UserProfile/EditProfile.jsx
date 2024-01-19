@@ -10,6 +10,7 @@ import { api_url } from "../../../config";
 
 function EditProfile() {
   const [showAddWorkExperience, setShowAddWorkExperience] = useState(false);
+  const [showAddEducation, setShowAddEducation] = useState(false);
 
   const getUserData = async () => {
     try {
@@ -89,12 +90,12 @@ function EditProfile() {
             <EducationCard />
             <EducationCard />
           </div>
-          {showAddWorkExperience ? (
-            <EducationForm />
+          {showAddEducation ? (
+            <EducationForm setShowAddEducation={setShowAddEducation} />
           ) : (
             <div
               className="text-sm text-green-600 flex gap-1 items-center hover:cursor-pointer"
-              onClick={() => setShowAddWorkExperience(true)}
+              onClick={() => setShowAddEducation(true)}
             >
               <i className="fa-solid fa-plus"></i>
               <span>Add education</span>
