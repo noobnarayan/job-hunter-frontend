@@ -9,7 +9,7 @@ const useUpdateUserData = () => {
   const [loading, setLoading] = useState(false);
 
   const updateUserData = async () => {
-    setLoading(true);add: private routing
+    setLoading(true);
     try {
       const userData = await userService.getCurrentUser();
       if (userData) {
