@@ -6,7 +6,7 @@ import { setLoadingFalse } from "../store/authSlice";
 function PrivateRoutes({ children }) {
   const { status, userData, isLoading } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
-
+  //
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (isLoading) {
