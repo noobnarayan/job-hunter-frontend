@@ -43,7 +43,7 @@ function UserPublicProfile() {
         <h2 className="mt-4 text-2xl font-semibold text-center">
           {userDetails?.userProfile?.name}
         </h2>
-        <div className="text-xs font-medium text-gray-600 flex gap-1.5 items-center flex-col md:flex-row justify-center">
+        <div className="text-xs font-medium text-gray-600 flex gap-1.5 items-center  justify-center">
           <span>
             {userDetails?.userProfile?.yearsOfExperience || 0} Years of exp
           </span>
@@ -85,7 +85,7 @@ function UserPublicProfile() {
           )}
         </span>
         <h3 className="text-center my-2 font-medium text-gray-600">About</h3>
-        <p className="mt-2 text-center px-10 my-10">
+        <p className="mt-2 text-center md:px-10 my-10">
           {userDetails?.userProfile?.bio}
         </p>
 
@@ -96,7 +96,7 @@ function UserPublicProfile() {
             {userDetails?.userProfile?.workExperience.map((exp, index) => (
               <div
                 key={index}
-                className="shadow rounded-md p-3 w-3/5 my-4 border-b-2 border-gray-200 border"
+                className="shadow rounded-md p-3 w-full md:w-3/5 my-4 border-b-2 border-gray-200 border"
               >
                 <div className="flex gap-5 items-center mb-5">
                   <div className="h-16 w-16 rounded-lg overflow-hidden border p-1.5 flex justify-center items-center">
@@ -132,7 +132,7 @@ function UserPublicProfile() {
             {userDetails?.userProfile?.education.map((edu) => (
               <div
                 key={edu._id}
-                className="border p-3.5 border-b-4 bg-gray-50 flex flex-col gap-3 rounded w-3/5 my-4"
+                className="border p-3.5 border-b-4 bg-gray-50 flex flex-col gap-3 rounded w-full md:w-3/5 my-4"
               >
                 <div className="flex justify-between">
                   <div className="flex gap-6 text-sm">
